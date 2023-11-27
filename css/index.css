@@ -1,0 +1,17 @@
+header{
+    font-size: 33px;
+}
+
+#firstImage img,
+#secondImage img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Hace que los bordes sean circulares */
+    margin-bottom: 1px;
+}
+
+#firstImage,
+#secondImage {
+    display: inline-block;
+    text-align: center;
+}

@@ -1,0 +1,75 @@
+<!-- FILEPATH: /home/marioguerra2002/Development web/assigment1/src/login.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Log in</title>
+  <link rel="stylesheet" href="css/login.css">
+
+</head>
+<body>
+  <header id="main-header">
+    <nav>
+        <div>
+            <a href="index.html"><img id="logoHeader" alt="Burger image" src="https://i.pinimg.com/originals/30/3c/d5/303cd5c4e2169130a9ddd90bfab76982.png"></a>
+        </div>
+        <div id="navegation">
+            <a id="loginPage" href="login.html">Login</a>
+            <a id="indexName" href="index.html">Home</a>
+            <a id="quizzPage" href="quizz.html">Quizz</a>
+        </div>
+    </nav>
+  </header>
+  <h1>Log in</h1>
+
+  <form id="loginForm" onsubmit="return CheckEntry()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+ 
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit" id="Summit">Log In</button>
+  </form>
+
+  <script>
+    function CheckEntry() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      if (password.length >= 8) {
+        var flag = true;
+        var CapitalCounter = 0;
+        var SpecialChar = false;
+        var Number = false;
+        for (var i = 0; i < password.length; i++) {
+          if (password[i] >= 'A' && password[i] <= 'Z') {
+            CapitalCounter++;
+          } else if (parseInt(password[i])) {
+            Number = true;
+          } else if (!(/[a-zA-Z0-9]/).test(password[i])) {
+            SpecialChar = true;
+          }
+        }
+        if (CapitalCounter < 2 || !SpecialChar || !Number) {
+          alert("Invalid password. Check that the password has at least 2 capital letters, 1 special character and 1 number.");
+          return false;
+        }
+      } else {
+        alert("Password must have at least 8 characters.");
+        return false;
+      }
+      alert("Welcome " + username + "!");
+      setTimeout(function () {
+        window.location.href = "index.html";
+      }, 1);
+
+      // Evitar el envío del formulario antes de la redirección
+      return false;
+    }
+  </script>
+  <footer>
+    <p>Made by: <a href="https://github.com/marioguerra2002/DevWeb_assignment1.git">Gabriel Franco and Mario Guerra</a></p>
+  </footer>
+</body>
+</html>
