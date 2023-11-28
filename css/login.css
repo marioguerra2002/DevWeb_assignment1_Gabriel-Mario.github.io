@@ -24,24 +24,32 @@ header {
   width: 100%;
   box-sizing: border-box;
 }
-header nav {
+header nav { /*Style applied to the tag nav inside the header*/
   display: flex;
   align-items: center;
 }
 
-header nav a {
-  color: aliceblue;
-  display: inline-block;
+header nav a { /* Style applied to the tag a inside the tag nav inside the header*/ 
   padding: 5px 10px;
-  text-decoration: none;
+  text-decoration: none; /*Remove lines of links*/
+  color: white;
+}
+
+header nav a:hover { /*Background color of tag a inside the header*/
+  color: red;
 }
 #logoHeader {
   width: 50px;
   height: 50px;
 }
-header nav a:hover {
-  background-color: red;
+body h1 {
+ 
+  /* Square where title goes */
+  width: 5%;
+  text-align: center;
+  color: rebeccapurple;
 }
+
 
 form {
   display: flex;
@@ -57,6 +65,9 @@ input {
   padding: 8px;
   margin-bottom: 15px;
 }
+svg {
+  align-items: middle;
+}
 
 button {
   padding: 10px;
@@ -65,11 +76,13 @@ button {
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  
 }
 
 button:hover {
   background-color: red;
 }
+
 
 footer {
   text-align: center;

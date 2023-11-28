@@ -7,7 +7,7 @@ body {
     min-height: 100vh;
     margin: 0;
 }
-
+/* Style applied to the header */
 header {
     display: flex;
     align-items: center;
@@ -19,31 +19,40 @@ header {
     width: 100%;
     box-sizing: border-box;
 }
-header nav {
-    display: flex;
-    align-items: center;
+header nav { /*Style applied to the tag nav inside the header*/
+  display: flex;
+  align-items: center;
 }
 
-header nav a {
-    color: aliceblue;
-    display: inline-block;
-    padding: 5px 10px;
-    text-decoration: none;
+header nav a { /* Style applied to the tag a inside the tag nav inside the header*/ 
+  padding: 5px 10px;
+  text-decoration: none; /*Remove lines of links*/
+  color: white;
 }
+
+header nav a:hover { /*Background color of tag a inside the header*/
+  color: red;
+}
+header h1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  color: white;
+  padding: 5px 10px;
+  margin: auto;
+}
+
 #logoHeader {
     width: 50px;
     height: 50px;
 }
-header nav a:hover {
-    background-color: red;
-}
+
 
 svg button:hover {
   background-color: red;
   color: white;
 }
 
-
+/* Style applied to the footer of the page */
 footer {
   text-align: center;
   width: 100%;

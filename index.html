@@ -11,7 +11,22 @@
     <header id="main-header">
         <nav>
             <div>
-                <a href="index.html"><img id="logoHeader" alt="Burger image" src="https://i.pinimg.com/originals/30/3c/d5/303cd5c4e2169130a9ddd90bfab76982.png"></a>
+                <!-- Logo image with sound in it -->
+                <img id="logoHeader" alt="Burger image" src="https://i.pinimg.com/originals/30/3c/d5/303cd5c4e2169130a9ddd90bfab76982.png">
+                <audio id="sound" src="images/nam-nam-nam.mp3"></audio>
+                <script>
+                    var image = document.getElementById('logoHeader');
+                    var audio = document.getElementById('sound');
+                
+                    image.addEventListener('click', function() { // When the image is clicked, the sound is played
+        
+                        if (audio.paused) {
+                            audio.play();
+                        } else {
+                            audio.currentTime = 0;
+                        }
+                    });
+                </script>
             </div>
         </nav>
     </header>
@@ -20,7 +35,7 @@
         <h1>Authors</h1>
     <table border="1">
         <tr>
-            <th>Gabriel</th> <!-- th es para encabezados (en negrita)--> 
+            <th>Gabriel</th>
             <td>Franco</td>
         </tr>
         <tr>
@@ -36,7 +51,7 @@
           </svg>
     </div>
 
- 
+    <!-- Image with link -->
     <div id="secondImage">
         <a href="https://youtu.be/0K7TQOKQ6us"> <img src="https://i0.wp.com/laderasur.com/wp-content/uploads/2022/08/perezosos-tres-dedos-creditos-sloth-conservation-3.jpg?ssl=1" alt="JPG Image"></a>
     </div>
@@ -46,6 +61,7 @@
     <div>
         <h1>LIST OF LINKS</h1>
         <ul>
+            <!-- Link to pages -->
             <li><a href="quizz.html">Quizz</a></li>
             <li><a href="healthyFood.html">Healthy Food</a></li>
             <li><a href="login.html">Login</a></li>
@@ -56,5 +72,5 @@
 </html>
     
     <footer>
-      <p>Made by: <a href="https://github.com/marioguerra2002/DevWeb_assignment1.git">Gabriel Franco and Mario Guerra</a></p>
+      <p>Made by: <a href="https://github.com/marioguerra2002/DevWeb_assignment1_Gabriel-Mario.github.io.git">Gabriel Franco and Mario Guerra</a></p>
     </footer>
